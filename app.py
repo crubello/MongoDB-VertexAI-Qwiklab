@@ -26,7 +26,7 @@ load_dotenv()
 
 os.environ["SENTENCE_TRANSFORMERS_HOME"] = "tmp/st/"
 // update the mongodb srv 
-client = MongoClient("mongodbsrv", tlsCAFile=certifi.where())
+client = MongoClient("mongodb+srv://rubello:demo123@demo.gll6y.mongodb.net/?retryWrites=true&w=majority&appName=demo", tlsCAFile=certifi.where())
 db = client["vertexaiApp"]
 
 one_way_hash = lambda x: hashlib.md5(x.encode("utf-8")).hexdigest()
